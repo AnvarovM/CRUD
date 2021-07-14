@@ -1,0 +1,22 @@
+extends layout 
+
+block content 
+    h1= title 
+    form(method="POST" action="/register")
+      .form-group
+        label(for='name') Isim kiriting
+        input#name.form-control(type='text' name="name")
+      .form-group
+        label(for='username') Usernameingizni kiriting 
+        input#username.form-control(type='text' name="username")
+      .form-group
+        label(for='email') Emailingizni qo`shing
+        input#email.form-control(type='text' name="email")
+      .form-group
+        label(for='password') Parolingizni qo`shing
+        input#password.form-control(type='password' name="password")
+      .form-group
+        label(for='password2') Parolingizni tasdiqlang
+        input#password2.form-control(type='password' name="password2")
+            
+      button.btn.btn-success(type='submit') Yuborish
